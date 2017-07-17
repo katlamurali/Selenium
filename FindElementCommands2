@@ -1,0 +1,26 @@
+package web.driver.commands;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class FindElementCommands2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.gecko.driver","F:/Selenium/geckodriver-v0.17.0-win32/geckodriver.exe/");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://toolsqa.wpengine.com/Automation-practice-form");
+		driver.findElement(By.partialLinkText("Partial")).click();
+		System.out.println("Partial Link Test pass");
+		String sClass =driver.findElements(By.tagName("button")).toString();
+		System.out.println(sClass);
+		driver.findElement(By.linkText("Link Test")).click();
+		System.out.println("Link Test Pass");
+		
+		
+		
+
+	}
+
+}
