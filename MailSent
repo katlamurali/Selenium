@@ -1,0 +1,31 @@
+package web.driver.commands;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class SendMail {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.gecko.driver","F:/Selenium/geckodriver-v0.17.0-win32/geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.gmail.com");
+		driver.findElement(By.id("identifierId")).sendKeys("katla.muralikrishna51@gmail.com");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/form/div[2]/div/div[2]/div[1]/content/span")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/form/div[2]/div/div/div[1]/div[1]/div/div[1]/div/div[1]/input")).sendKeys("divya@7551");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/form/div[2]/div/div/div[2]/div[1]/content/span")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[7]/div[3]/div/div[2]/div[1]/div[1]/div[1]/div[2]/div/div/div/div[1]/div/div")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[16]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[2]/div[1]")).sendKeys("shivashankar.tummala@gmail.com");
+		Thread.sleep(2000);
+		driver.findElement(By.id("vv")).sendKeys("Test By Automation code");
+		Thread.sleep(5000);
+		driver.close();
+	}
+
+}
