@@ -1,0 +1,36 @@
+package web.driver.commands;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class AmazonPrime {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.gecko.driver","F:/Selenium/geckodriver-v0.17.0-win32/geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.amazonprime.com");
+		String accountList;
+		String link;
+		driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id='ap_email']")).sendKeys("katla17204@mail.npu.edu");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\'ap_password\']")).sendKeys("Divya@7551");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id='signInSubmit']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[1]/header/div/div[2]/div[2]/div/a[2]/span[2]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[4]/div[2]/div[2]/div/div[2]/a[22]/span")).click();
+		Thread.sleep(2000);
+		//driver.findElement(By.xpath("//*[@id=':w1']")).sendKeys("Test By Automation code");
+		//Thread.sleep(5000);
+		driver.close();
+	}
+
+	}
+
+
