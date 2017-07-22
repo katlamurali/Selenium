@@ -1,0 +1,26 @@
+package web.driver.commands;
+
+import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class ScrollDown {
+
+	public static void main(String[] args) throws InterruptedException{
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.gecko.driver","F:/Selenium/geckodriver-v0.17.0-win32/geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.flipkart.com/womens-clothing/pr?sid=2oq,c1r&amp;otracker=hp_nmenu_sub_women_1_View%20all");
+		Thread.sleep(2000);
+		driver.manage().window().maximize();
+		JavascriptExecutor jsx = (JavascriptExecutor)driver;
+		jsx.executeScript("window.scrollBy(0,4500)","");
+		Thread.sleep(2000);
+		jsx.executeScript("window.scrollBy(450,0)","");
+		Thread.sleep(2000);
+		
+				
+	}
+
+}
