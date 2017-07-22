@@ -39,17 +39,16 @@ public class FacebookTest {
 				
 			List<WebElement> friendListAfterScrolling =driver.findElements(By.xpath("//div[@class='fsl fwb fcb']/a"));
 			if(friendListBeforeScrolling.size() == friendListAfterScrolling.size()) {
+				for(WebElement e:friendListAfterScrolling) {
+					System.out.println(e.getText());
 			break;
 			}
 			
 			
 			
 		}
-		//for(WebElement e:links) {
-			//System.out.println(e.getText());
-		//}
-		driver.close();
-
+		
 	}
-
+	}
 }
+
